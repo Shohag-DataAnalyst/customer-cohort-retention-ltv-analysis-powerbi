@@ -149,16 +149,16 @@ You can interact with visuals to review patterns, compare cohorts, and interpret
 ## 🖼 Dashboard Screenshots
 
 📌 **Retention Heatmap**  
-*(add screenshot here)*  
+![Retention Heatmap](Screenshots/heatmap.png)  
 
 📌 **Retention Trend Curve**  
-*(add screenshot here)*  
+![Retention Curve](Screenshots/retention_curve.png) 
 
 📌 **Lifetime Value (LTV) Curve**  
-*(add screenshot here)*  
+![Lifetime Value Curve](Screenshots/ltv_curve.png)  
 
 📌 **Full Dashboard View**  
-*(add screenshot here)*
+![Full Dashboard](Screenshots/dashboard_full.png)
 
  ---
 
