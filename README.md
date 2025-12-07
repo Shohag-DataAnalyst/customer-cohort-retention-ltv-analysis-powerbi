@@ -170,7 +170,7 @@ You can interact with visuals to review patterns, compare cohorts, and interpret
 
 ✔ **Early churn is high** — most customers disengage after their first month  
 ✔ A smaller loyal segment continues returning beyond month 6  
-✔ **Average retention averages around ~17%**, indicating a repeat customer core  
+✔ **Average retention stabilizes around ~17%**, indicating a repeat customer core  
 ✔ Retention spikes around **months 10–12**, suggesting reactivation or seasonal behavior  
 ✔ **Lifetime value steadily grows**, reaching ~$2,600+ per retained customer  
 ✔ Cohorts improve over time — newer cohorts show stronger spend accumulation  
