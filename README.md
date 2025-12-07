@@ -13,7 +13,7 @@
 
 ---
 
-📌 A data analytics project measuring **customer retention and lifetime value growth** using SQL + Power BI.
+📌 **A data analytics project measuring **customer retention and lifetime value growth** using SQL + Power BI.**
 
 </div>
 
