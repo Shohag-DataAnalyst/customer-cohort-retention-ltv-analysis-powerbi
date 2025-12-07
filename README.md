@@ -6,6 +6,10 @@
 <img src="https://img.shields.io/badge/Status-Completed-brightgreen" />
 <img src="https://img.shields.io/badge/SQL-PostgreSQL-blue" />
 <img src="https://img.shields.io/badge/BI-Power%20BI-yellow" />
+<a href="https://github.com/Shohag-DataAnalyst/customer-cohort-retention-ltv-analysis-powerbi">
+   <img src="https://img.shields.io/badge/View%20Project-On%20GitHub-blue" />
+</a>
+
 
 ---
 
