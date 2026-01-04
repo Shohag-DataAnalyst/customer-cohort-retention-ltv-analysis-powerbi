@@ -1,190 +1,193 @@
-<div align="center">
-
-# 📊 Customer Cohort Retention & Lifetime Value Analysis  
-### SQL | Power BI | Cohort Analysis + LTV Modeling  
-
-<img src="https://img.shields.io/badge/Status-Completed-brightgreen" />
-<img src="https://img.shields.io/badge/SQL-PostgreSQL-blue" />
-<img src="https://img.shields.io/badge/BI-Power%20BI-yellow" />
-<a href="https://github.com/Shohag-DataAnalyst/customer-cohort-retention-ltv-analysis-powerbi">
-   <img src="https://img.shields.io/badge/View%20Project-On%20GitHub-blue" />
-</a>
-
+<p align="center">
+  <img src="https://img.shields.io/badge/Skills-SQL-blue?style=for-the-badge" alt="SQL">
+  <img src="https://img.shields.io/badge/Tool-Power%20BI-yellow?style=for-the-badge" alt="Power BI">
+  <img src="https://img.shields.io/badge/Database-PostgreSQL-336791?style=for-the-badge" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" alt="Completed">
+</p>
 
 ---
 
-📌 **A data analytics project measuring **customer retention and lifetime value growth** using SQL + Power BI.**
+# 📊 Customer Cohort Retention & Lifetime Value Analysis (SQL + Power BI)
 
-</div>
-
----
-
-## 🔍 Project Overview
-
-This project analyzes customer behavior over time using **Cohort retention modeling** and **LTV curve analysis**.
-
-It tracks:
-
-✔ How customer cohorts perform over months  
-✔ When churn happens  
-✔ How much value returning customers contribute  
-
-The outcome is a Power BI dashboard showing retention patterns and lifetime value progression.
+An end-to-end analytics project focused on **customer retention behavior** and **lifetime value (LTV) growth** using cohort analysis.  
+Built with **SQL for modeling** and **Power BI for visualization**.
 
 ---
 
-## 🧠 Business Questions Answered
+## 📁 Project Overview
 
-- How many customers return after their first purchase?
-- What percentage of users return after 1–12+ months?
-- Which monthly cohorts are the strongest performers?
-- What is the **average retention rate across cohorts?**
-- How does **lifetime value evolve** over time?
+This project analyzes how customers behave **after their first purchase** using **cohort-based retention analysis** and **lifetime value modeling**.
+
+Instead of looking at customers in aggregate, the analysis groups users into **monthly cohorts** based on their first purchase date and tracks:
+
+- How long customers continue returning
+- When churn typically occurs
+- How much value customers generate over time
+- How newer cohorts compare to older ones
+
+The final result is an interactive Power BI dashboard that clearly visualizes:
+- Retention decay
+- Long-term customer value
+- Cohort performance trends
+
+This project demonstrates the full analytics workflow:
+
+**Raw transactions → SQL cohort modeling → retention & LTV metrics → Power BI dashboard → business insights**
 
 ---
 
-## 🛠 Tools & Technologies Used
+## ❓ Business Questions Answered
 
-| Component       | Technology            |
-|----------------|------------------------|
-| Data storage   | PostgreSQL            |
-| Transformations | SQL Views / CTEs      |
-| Visualization  | Power BI              |
-| Language       | SQL + DAX (minor)     |
+This project is designed to answer questions such as:
+
+- How many customers return after their **first purchase**?
+- What percentage of users return after **1, 3, 6, or 12+ months**?
+- Which **monthly cohorts** retain customers the longest?
+- What is the **average retention rate** across all cohorts?
+- When does **churn most commonly occur**?
+- How does **customer lifetime value (LTV)** grow over time?
+- Do newer cohorts perform better than older ones?
 
 ---
 
-## 🗂 Dataset & Data Model
+## 🛠 Tools & Technologies
 
-### Key fields used:
+- **SQL (PostgreSQL)**
+  - Window functions
+  - Date arithmetic
+  - Cohort assignment
+  - Retention calculations
+  - Cumulative revenue modeling
+
+- **Power BI**
+  - Cohort heatmaps
+  - Line charts for retention & LTV
+  - KPI cards
+  - Interactive filtering
+
+- **DAX (Light usage)**
+  - KPI calculations
+  - Formatting and aggregation logic
+
+---
+
+## 🗄️ Dataset & Data Model
+
+The analysis is based on a transactional sales dataset containing:
 
 - `customer_id`
 - `order_date`
 - `revenue`
-- `cohort_month`
-- `period_number`
-- `customers_in_period`
-- `lifetime_value`
 
-## 📂 Data Model Flow
+From these fields, the project derives:
 
-vw_sales  
-    ↓  
-vw_customer_first_purchase  
-    ↓  
-vw_cohort_activity  
-    ↓  
-vw_cohort_retention_pct  
-vw_cohort_ltv  
-    ↓  
+- **Cohort Month** → customer’s first purchase month  
+- **Period Number** → months since first purchase  
+- **Customers in Period** → active users per cohort/month  
+- **Retention Percentage**  
+- **Lifetime Value (LTV)**  
+
+### 📂 Data Model Flow
+
+vw_sales
+↓
+vw_customer_first_purchase
+↓
+vw_cohort_activity
+↓
+vw_cohort_retention_pct
+vw_cohort_ltv
+↓
 Power BI Dashboard
 
 ---
 
 ## 📁 Project Structure
 
-📦 Screenshots             → Power BI dashboard images  
-📄 cohort_analysis.sql     → SQL logic for cohort, retention & LTV modeling  
-📄 cohort_dashboard.pbix   → Power BI dashboard file  
-📄 README.md               → Full project documentation
+```bash
+customer-cohort-retention-ltv-analysis-powerbi/
+│
+├── README.md                     # Project documentation
+├── cohort_analysis.sql            # Full SQL logic for cohort, retention & LTV modeling
+├── cohort_dashboard.pbix          # Power BI dashboard file
+├── Screenshots/
+│   ├── heatmap.png
+│   ├── retention_curve.png
+│   ├── ltv_curve.png
+│   └── dashboard_full.png
+```
 
 ---
 
 ## 📊 Dashboards Included
 
-✔ Cohort Retention Heatmap  
-✔ Retention Trend Curve  
-✔ Customer Lifetime Value Curve  
-✔ Average Retention KPI Card
+### 1️⃣ Cohort Retention Heatmap
+- Rows → Cohort month
+- Columns → Months since first purchase
+- Color intensity → Retention %
+- Quickly reveals churn patterns and strong cohort
+
+### 2️⃣ Retention Trend Curve
+- Average retention rate over time
+- Shows how engagement decays month-by-month
+
+### 3️⃣ Customer Lifetime Value (LTV) Curve
+- Cumulative LTV growth by cohort
+- Highlights long-term revenue contribution of retained customers
+
+### 4️⃣ KPI Cards
+- Average retention rate
+- Average lifetime value
+- Active cohorts and periods
 
 ---
 
-## 🧮 SQL Logic
+## Key DAX Measures 
 
-This project is driven mainly by SQL. The `cohort_analysis.sql` script includes:
+```DAX
+Average Retention % =
+AVERAGE(vw_cohort_retention_pct[retention_pct])
 
-- **Cohort assignment**  
-  - Identifies each customer's first purchase date  
-  - Groups customers into monthly cohorts using `cohort_month`
+Average LTV =
+AVERAGE(vw_cohort_ltv[avg_ltv_per_customer])
 
-- **Cohort activity & period calculation**  
-  - Calculates `period_number` = months since first purchase  
-  - Tracks when customers return after joining
+Active Customers =
+SUM(vw_cohort_activity[customers_in_period])
+```
 
-- **Retention calculation**  
-  - Counts distinct active customers per cohort and period  
-  - Computes `retention_pct` = customers_in_period / cohort_size
+--- 
 
-- **Lifetime value (LTV) modeling**  
-  - Aggregates revenue by cohort and period  
-  - Builds `cumulative_revenue`  
-  - Derives `avg_ltv_per_customer` over time
+## How to Run This Project
 
-📄 All logic is contained in: `cohort_analysis.sql`
-
----
-
-## 🚀 How to Run This Project
-
-### 🔹 Step 1 — Load SQL Logic
-Run `cohort_analysis.sql` in PostgreSQL to generate:
-
-- cohort assignment view  
-- retention calculation view  
-- lifetime value (LTV) view  
-
-### 🔹 Step 2 — Refresh Power BI Data
-Connect Power BI to your database and load:
-
-- `vw_cohort_retention_pct`
-- `vw_cohort_ltv`
-
-### 🔹 Step 3 — Explore Dashboard
-Open `cohort_dashboard.pbix` to view:
-
-- retention heatmap  
-- trend curves  
-- KPI metrics  
-
-You can interact with visuals to review patterns, compare cohorts, and interpret customer value behavior.
+### ✅ Option 1 — View Dashboard Only
+1. Download `cohort_dashboard.pbix
+2. Open it in Power BI Desktop
+3. Explore all visuals and insights directly
 
 ---
 
-## 🖼 Dashboard Screenshots
-
-📌 **Retention Heatmap**  
-![Retention Heatmap](Screenshots/heatmap.png)  
-
-📌 **Retention Trend Curve**  
-![Retention Curve](Screenshots/retention_curve.png) 
-
-📌 **Lifetime Value (LTV) Curve**  
-![Lifetime Value Curve](Screenshots/ltv_curve.png)  
-
-📌 **Full Dashboard View**  
-![Full Dashboard](Screenshots/dashboard_full.png)
-
- ---
-
- ## 🔎 Key Insights & Findings
-
-✔ **Early churn is high** — most customers disengage after their first month  
-✔ A smaller loyal segment continues returning beyond month 6  
-✔ **Average retention stabilizes around ~17%**, indicating a repeat customer core  
-✔ Retention spikes around **months 10–12**, suggesting reactivation or seasonal behavior  
-✔ **Lifetime value steadily grows**, reaching ~$2,600+ per retained customer  
-✔ Cohorts improve over time — newer cohorts show stronger spend accumulation  
-
-➡ These insights help businesses understand user loyalty, identify reactivation opportunities, and forecast long-term customer value.
+### ✅ Option 2 — Rebuild the Full SQL + Power BI Pipeline
+1. Ensure you have a transactional sales table with:
+   - `customer_id`
+   - `order_date`
+   - `revenue`
+2. Run the SQL script:
+```sql
+cohort_analysis.sql
+```
+This creates:
+   - Cohort assignment view
+   - Retention calculation view
+   - Lifetime value (LTV) view
+3. Open Power BI Desktop
+4. Connect to PostgreSQL
+5. Load:
+   - `vw_cohort_retention_pct`
+   - `vw_cohort_ltv`
+6. Refresh the data and explore the dashboard
 
 ---
 
-## 📬 Contact
+## Dashboard Screenshots
 
-If you’d like to connect, collaborate, or discuss analytics work — feel free to reach out:
-
-🔗 **LinkedIn:** https://www.linkedin.com/in/dataanalystshohag/  
-🔗 **GitHub:** https://github.com/Shohag-DataAnalyst
-
-💬 Open to opportunities in data analytics, dashboarding, SQL modeling, and BI reporting.
-
+### Cohort Retention Heatmap
