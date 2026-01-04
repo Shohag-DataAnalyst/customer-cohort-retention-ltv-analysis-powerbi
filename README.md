@@ -14,7 +14,7 @@ Built with **SQL for modeling** and **Power BI for visualization**.
 
 ---
 
-## 📁 Project Overview
+## 📌 Project Overview
 
 This project analyzes how customers behave **after their first purchase** using **cohort-based retention analysis** and **lifetime value modeling**.
 
@@ -71,7 +71,7 @@ This project is designed to answer questions such as:
 
 ---
 
-## 🗄️ Dataset & Data Model
+## 🧱 Dataset & Data Model
 
 The analysis is based on a transactional sales dataset containing:
 
@@ -142,7 +142,7 @@ customer-cohort-retention-ltv-analysis-powerbi/
 
 ---
 
-## Key DAX Measures 
+## 🧮 Key DAX Measures 
 
 ```DAX
 Average Retention % =
@@ -157,7 +157,7 @@ SUM(vw_cohort_activity[customers_in_period])
 
 --- 
 
-## How to Run This Project
+## 🚀 How to Run This Project
 
 ### ✅ Option 1 — View Dashboard Only
 1. Download `cohort_dashboard.pbix
@@ -188,6 +188,49 @@ This creates:
 
 ---
 
-## Dashboard Screenshots
+## 📸 Dashboard Screenshots
 
 ### Cohort Retention Heatmap
+![Heatmap](Screenshots/heatmap.png)
+
+### Retention Trend Curve
+![Retention](Screenshots/retention_curve.png)
+
+### Lifetime value (LTV) Curve
+![LTV Curve](Screenshots/ltv_curve.png)
+
+### Full Dashboard
+![Dashboard](Screenshots/dashboard_full.png)
+
+---
+
+## 📈 Key Insights & Findings
+
+### 🔹 Early Churn Is High
+- Most customers disengage after their first month, indicating onboarding and early engagement are critical.
+
+### 🔹 A Core Loyal Segment Exists 
+- A smaller group of users continues returning beyong month 6, forming a stable retention base.
+
+### 🔹 Average Retention Stabilizes Around ~17%
+- After the initial drop, retention levels flatten, suggesting predictable long-term behavior.
+
+### 🔹 Seasonal or Reactivation Effects Appear Around Months 10–12
+- Retention spikes in later period hint at promotions, seasonal demand, or reactivation campaigns.
+
+### 🔹 Lifetime Value Grows Steadily
+- Average LTV exceeds $2,600+ per retained customer, reinforcing the importance of long-term retention.
+
+### 🔹 Newer Cohorts Perform Better
+- Recent cohorts show stronger spend accumulation, suggesting improvements in acquisition or customer experience.
+
+---
+
+## 📬 Contact
+
+**Author:** Shohag  
+
+If you’d like to discuss this project, collaborate, or talk about data analyst roles:
+
+- 💼 LinkedIn: [NURA ALAM SHOHAG](https://www.linkedin.com/in/dataanalystshohag/)
+- 🧑‍💻 GitHub: [Shohag-DataAnalyst](https://github.com/Shohag-DataAnalyst)
