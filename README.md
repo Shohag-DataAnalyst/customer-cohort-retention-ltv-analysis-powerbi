@@ -16,7 +16,7 @@ Built with **SQL for modeling** and **Power BI for visualization**.
 
 ## 🔗 Live Interactive Dashboard
 👉 **View the live Power BI dashboard (no login required):**  
-[Click Here](https://app.powerbi.com/view?r=eyJrIjoiOTE4ZWRiMDYtMTY1NC00YTkxLThkMTUtYWM4YmNkODQ1OTZmIiwidCI6IjY5MDRhYjJkLTlhZjQtNDNlOS05ODlmLTY1Mzg1NWEyODcyYSIsImMiOjEwfQ%3D%3D)
+👉 https://datalel.com
 
 ---
 
